@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyBM1z8cEbg9oK5B9oBNjGZEkwtlCwf7zCw",
+    authDomain: "central-fotovoltaica-21-megas.firebaseapp.com",
+    databaseURL: "https://central-fotovoltaica-21-megas-default-rtdb.firebaseio.com",
+    projectId: "central-fotovoltaica-21-megas",
+    storageBucket: "central-fotovoltaica-21-megas.appspot.com",
+    messagingSenderId: "743374315426",
+    appId: "1:743374315426:web:15055d933a483b486a9cfb",
+    measurementId: "G-1TRR7J7E4Z"
+  }
 };
 
 /*

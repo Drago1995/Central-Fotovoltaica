@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "central-fotovoltaica-21-megas"
+  },
+  "targets": {
+    "central-fotovoltaica-21-megas": {
+      "hosting": {
+        "Central-Fotovoltaica": [
+          "central-fotovoltaica-21-megas"
+        ]
+      }
+    }
+  }
+}
