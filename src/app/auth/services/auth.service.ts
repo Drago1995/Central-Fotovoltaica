@@ -1,22 +1,17 @@
 import { first } from 'rxjs/operators';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Injectable } from '@angular/core';
-/* import { auth } from 'firebase/app'
-import { User } from 'firebase'; */
-
-
+import { Injectable } from '@angular/core'; 
 
 @Injectable()
 export class AuthService {
 
-  /* public user: User; */
 
   constructor(public afAuth: AngularFireAuth) { }
 
 
   async login(email: string, password: string) {
     const result = await this.afAuth.signInWithEmailAndPassword(email, password);
-    return result;
+    return result;  
   
   }
 

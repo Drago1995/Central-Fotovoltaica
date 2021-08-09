@@ -1,13 +1,14 @@
 import { AuthService } from './../services/auth.service';
-/* import { auth } from 'firebase/app'; */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
+  providers: [AuthService]
 })
 export class RegisterComponent implements OnInit {
 
@@ -16,17 +17,21 @@ export class RegisterComponent implements OnInit {
     password: new FormControl(''),
   })
 
-  constructor(/* public authSvc: AuthService */) { }
+  constructor(private authSvc: AuthService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  onRegister() {
-    console.log('Form->', this.registerForm.value);
+  async onRegister() {
+    const { email, password } = this.registerForm.value;
+    try {
+      const user = await this.authSvc.register(email, password);
+      if (user) {
+        this.router.navigate(['/home']);
+      }
 
-    /* const { email, password } = this.registerForm.value;
-    this.authSvc.register(email, password); */
-
+    } catch (error: any) {
+      alert(error.message)
+    }
   }
-
 }

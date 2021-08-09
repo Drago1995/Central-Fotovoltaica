@@ -10,8 +10,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
