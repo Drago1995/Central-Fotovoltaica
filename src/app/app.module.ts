@@ -1,3 +1,4 @@
+import { jqxGridModule } from 'jqwidgets-ng/jqxgrid';
 import { environment } from './../environments/environment';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
+import { AngularFireAuthModule} from '@angular/fire/auth';
+
+
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    jqxGridModule
     
   ],
   providers: [],

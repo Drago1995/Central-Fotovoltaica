@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: 'https://central-fotovoltaica-21-megas.web.app/login',
     pathMatch: 'full',
   },
   {
